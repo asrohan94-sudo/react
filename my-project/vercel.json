@@ -1,20 +1,16 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "my-project/server.js",
-            "use": "@vercel/node",
-            "config": {
-                "includeFiles": [
-                    "dist/**"
-                ]
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "my-project/server.js"
-        }
-    ]
+  "rewrites": [
+    {
+      "source": "/admin/(.*)",
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend/server.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/my-project/index.html"
+    }
+  ]
 }
