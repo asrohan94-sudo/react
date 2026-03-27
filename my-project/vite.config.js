@@ -4,21 +4,26 @@ import path from "path"
 
 // https://vite.dev/config/
 export default defineConfig({
-   theme: {
-    extend: {
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-6px)' }, // floating up by 6px
-        },
-      },
-      animation: {
-        'float': 'float 3s ease-in-out infinite',
-      },
-    },
-  },
   plugins: [react()],
-  server:{port:5173},
+
+  // Theme/animations belong in tailwind.config.js, NOT here
+  // Remove the invalid 'theme' block from vite.config.js
+
+  server: {
+    port: 5173,
+  },
+
+  preview: {
+    port: 4173,                    // Optional: explicit preview port
+    host: true,                    // Listen on all interfaces
+    allowedHosts: [
+      'examy-com.onrender.com',
+      '.onrender.com',             // Allows all *.onrender.com subdomains
+      'localhost',
+      '127.0.0.1'
+    ]
+  },
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
