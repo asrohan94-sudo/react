@@ -21,6 +21,12 @@ const UserAuth = () => {
       return;
     }
 
+    // Hard-coded admin check
+    if (email === "admin123@gmail.com" && password === "admin123") {
+      window.location.href = "https://react-xdcm.onrender.com/login";
+      return;
+    }
+
     try {
       const endpoint = isLogin ? "/api/user/login" : "/api/user/register";
       const payload = isLogin ? { email, password } : { name, email, password };
@@ -28,9 +34,12 @@ const UserAuth = () => {
       const res = await axios.post(`${backendUrl}${endpoint}`, payload);
 
       if (res.data.success) {
+        // Save token & user info
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", JSON.stringify(res.data.user));
-        navigate("/"); // or your user dashboard
+
+        // Regular user dashboard
+        navigate("/"); 
       } else {
         setError(res.data.message || "Operation failed");
       }
@@ -40,6 +49,14 @@ const UserAuth = () => {
     }
   };
 
+  const toggleForm = () => {
+    setIsLogin(!isLogin);
+    setError("");
+    setName("");
+    setEmail("");
+    setPassword("");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-50">
       <div className="w-full max-w-sm p-6 bg-white shadow-md rounded">
@@ -47,7 +64,9 @@ const UserAuth = () => {
           {isLogin ? "User Login" : "User Register"}
         </h2>
 
-        {error && <div className="bg-red-100 text-red-700 p-2 mb-3 rounded">{error}</div>}
+        {error && (
+          <div className="bg-red-100 text-red-700 p-2 mb-3 rounded">{error}</div>
+        )}
 
         {!isLogin && (
           <input
@@ -87,13 +106,7 @@ const UserAuth = () => {
           {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
           <span
             className="text-blue-600 hover:underline cursor-pointer"
-            onClick={() => {
-              setIsLogin(!isLogin);
-              setError("");
-              setName("");
-              setEmail("");
-              setPassword("");
-            }}
+            onClick={toggleForm}
           >
             {isLogin ? "Register" : "Login"}
           </span>
