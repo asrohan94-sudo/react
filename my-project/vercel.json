@@ -1,16 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/admin/(.*)",
-      "destination": "/admin"
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     },
     {
-      "source": "/api/(.*)",
-      "destination": "/backend/server.js"
+      "source": "/admin/(.*)",
+      "destination": "/admin/index.html"
     },
     {
       "source": "/(.*)",
-      "destination": "/my-project"
+      "destination": "/index.html"
     }
   ]
 }
