@@ -1,9 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from "path"
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    tailwindcss(),          // ← Fixed: Must be inside the plugins array
+  ],
 
   server: {
     port: 5173,
@@ -13,9 +17,9 @@ export default defineConfig({
     host: true,
     port: 4173,
     allowedHosts: [
-      'examy-com.onrender.com',        // ← Your previous domain
-      'react-xdcm.onrender.com',       // ← New domain causing the error
-      '.onrender.com',                 // ← Allows ALL *.onrender.com subdomains (Recommended)
+      'examy-com.onrender.com',
+      'react-xdcm.onrender.com',     // Current domain causing the error
+      '.onrender.com',               // Safest: allows all *.onrender.com
       'localhost',
       '127.0.0.1'
     ]
