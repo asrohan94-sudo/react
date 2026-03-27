@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/admin/(.*)",
-      "destination": "/admin/index.html"
+      "destination": "/admin"
     },
     {
       "source": "/api/(.*)",
@@ -10,7 +10,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/my-project/index.html"
+      "destination": "/my-project"
     }
   ]
 }
