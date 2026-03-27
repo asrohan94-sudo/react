@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
 import OurPolicy from '../components/OurPolicy'
-import Bestseller from '../components/Bestseller'
+import BestSeller from '../components/Bestseller'
 import LatestCollection from '../components/LatestCollectons'
 
 
@@ -13,7 +13,7 @@ const Home = () => {
       
       <Hero/>
       <LatestCollection/>
-      <Bestseller/>
+      <BestSeller/>
       <OurPolicy/>
       
     </div>
