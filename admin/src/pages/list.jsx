@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://examly-ammh.onrender.com";
 
 export default function CourseList() {
   const navigate = useNavigate();

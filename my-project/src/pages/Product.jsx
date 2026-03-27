@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 import axios from "axios";
 import RelatedProducts from "../components/RelatedExam";
 
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://examly-ammh.onrender.com";
 
 const Product = () => {
   const { id } = useParams();

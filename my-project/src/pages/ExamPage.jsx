@@ -7,7 +7,7 @@ const ExamPage = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
 
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "https://examly-ammh.onrender.com";
   const token = localStorage.getItem("token");
 
   const { exam } = state || {};

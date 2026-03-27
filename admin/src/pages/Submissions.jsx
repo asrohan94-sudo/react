@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://examly-ammh.onrender.com";
 
 export default function ViewExam() {
   const { id } = useParams(); // exam ID from URL

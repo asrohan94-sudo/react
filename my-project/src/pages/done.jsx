@@ -5,7 +5,7 @@ const Done = () => {
   const [doneExams, setDoneExams] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "https://examly-ammh.onrender.com";
 
   useEffect(() => {
     const fetchDoneExams = async () => {

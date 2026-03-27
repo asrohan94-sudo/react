@@ -6,7 +6,7 @@ const My = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "https://examly-ammh.onrender.com";
 
   // ------------------------
   // Helper: Safe image

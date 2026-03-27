@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import ShopContext from "../context/ShopContext";
 import axios from "axios";
 
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://examly-ammh.onrender.com";
 
 const Cart = () => {
   const { currency } = useContext(ShopContext);

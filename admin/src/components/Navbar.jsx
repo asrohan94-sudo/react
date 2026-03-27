@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 import { GiHamburgerMenu } from "react-icons/gi";
 import axios from "axios";
 
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://examly-ammh.onrender.com";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState("");

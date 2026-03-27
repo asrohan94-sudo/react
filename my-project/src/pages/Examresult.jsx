@@ -5,7 +5,7 @@ import axios from "axios";
 const ResultAnalysisCard = () => {
   const { examId } = useParams();
 
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "https://examly-ammh.onrender.com";
   const token = localStorage.getItem("token");
 
   const [result, setResult] = useState(null);

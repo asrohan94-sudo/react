@@ -6,7 +6,7 @@ const CourseEnrollmentFlow = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const backendUrl = "http://localhost:5000";
+  const backendUrl = "https://examly-ammh.onrender.com";
   const token = localStorage.getItem("token");
   const userId = localStorage.getItem("userId");
 
