@@ -23,7 +23,7 @@ const UserAuth = () => {
 
     // Hard-coded admin check
     if (email === "admin123@gmail.com" && password === "admin123") {
-      window.location.href = "https://react-xdcm.onrender.com";
+      window.location.href = "https://react-xdcm.onrender.com/login";
       return;
     }
 

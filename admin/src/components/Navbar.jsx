@@ -192,7 +192,7 @@ const Navbar = () => {
         {!isLoggedIn && (
           <NavLink
             to="/login"
-            className="mt-6 w-full py-2 bg-red-500 text-white rounded hover:bg-blue-700 text-center block"
+            className="mt-6 w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-700 text-center block"
           >
             Login
           </NavLink>
