@@ -5,12 +5,8 @@
       "destination": "/admin/index.html"
     },
     {
-      "source": "/api/(.*)",
-      "destination": "/backend/server.js"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/my-project/index.htmlz"
+      "destination": "/index.html"
     }
   ]
 }
